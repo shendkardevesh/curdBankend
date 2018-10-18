@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
       // next();
     })
     .catch(err => {
-      res.json(err);
+      // res.json(err);
+      res.status(400).send({error: err});
     });
 });
 router.post('/', function(req, res, next) {
@@ -19,7 +20,8 @@ router.post('/', function(req, res, next) {
       res.json(response);
     })
     .catch(err => {
-      res.json(err);
+      // res.json(err);
+      res.status(400).send({error: err});
     });
 });
 router.put('/:id', function(req, res, next) {
@@ -28,7 +30,8 @@ router.put('/:id', function(req, res, next) {
       res.json(response);
     })
     .catch(err => {
-      res.json(err);
+      // res.json(err);
+      res.status(400).send({error: err});
     });
 });
 router.delete('/:id', function(req, res, next) {
@@ -37,7 +40,8 @@ router.delete('/:id', function(req, res, next) {
       res.json(response);
     })
     .catch(err => {
-      res.json(err);
+      // res.json(err);
+      res.status(400).send({error: err});
     })
 })
 module.exports = router;
